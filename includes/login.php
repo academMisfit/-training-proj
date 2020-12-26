@@ -11,7 +11,7 @@ if(isset($_POST['login-submit'])){
 
   require_once "config.php";
   require_once "functions.php";
-  if (!invalidEmail($amil)){
+  if (!invalidEmail($email)){
     login_user($conn, $email, $pwd);
   }
 
