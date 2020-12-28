@@ -5,7 +5,7 @@ if(isset($_POST['login-submit'])){
 
   //validation of inputs
   if (empty($email) || empty($pwd)) {
-    header("location: ../login_form.php?error=emptyinput");
+    header("location: ../login_form?error=emptyinput");
     exit();
   }
 
@@ -18,6 +18,6 @@ if(isset($_POST['login-submit'])){
 
 }
 else {
-  header("location: ../login_form.php");
+  header("location: ../login_form");
 }
  ?>

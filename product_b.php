@@ -34,5 +34,8 @@ echo "<p>Price for unit: " . $price ."</p>";
   if (isset($_GET['addedtocart'])){
     echo "<p>The item was added.</p>";
   }
+  else if (isset($_GET['invalidamount'])){
+    echo "<p>Amount should be positive integer.</p>";
+  }
   require_once 'footer.php';
 ?>

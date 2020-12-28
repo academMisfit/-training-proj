@@ -35,7 +35,7 @@ require_once('header.php');
      echo "<li>Total price: ".$sum."</li><br>";
      echo "<li><a href='includes/process_cart.php?clearcart'>Clear cart</a></li>";
      echo "</ul>";
-     echo "<form action='order.php' method='post'>";
+     echo "<form action='order' method='post'>";
      echo "<button>Continue</button>";
      echo "</form>";
    }
