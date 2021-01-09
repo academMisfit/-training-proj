@@ -20,5 +20,5 @@ session_start();
         echo '<li><a href="sign_up_form">Sign up</a></li>';
       }
      ?>
-    <li><a href="cart">Cart</a> </li>
+    <li><a href="cart">Cart <?php if (isset($_SESSION['cart']) && count($_SESSION['cart']>0)) { echo "(". count($_SESSION['cart']) .")";} ?></a> </li>
   </ul>
