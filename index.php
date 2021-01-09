@@ -21,8 +21,8 @@ if (!$conn) {
       $index = 1;
       while ($row = mysqli_fetch_array($result)) {
         echo "<tr>";
-        echo "<td>" . $index;
-        echo "<td><a href='".$row['name'].".php'>" . $row['name'] . "</a>";
+        echo "<td>" . $index."</td>";
+        echo "<td><a href='".$row['name']."'>" . $row['name'] . "</a></td>";
         echo "</tr>";
         $index +=1;
       }

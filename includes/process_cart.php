@@ -23,7 +23,7 @@ if (isset($_POST['addto-cart'])){
     exit();
   }
   if (!ctype_digit($amount)){
-    header("Location: ../".$prod_name.".php?invalidamount");
+    header("Location: ../".$prod_name."?invalidamount");
     exit;
   }
   if (!ctype_digit($prod_id)){
@@ -33,7 +33,7 @@ if (isset($_POST['addto-cart'])){
 
   $_SESSION['cart'][$prod_id] = array($product_name, $amount);
 
-  header("location: ../".$prod_name.".php?addedtocart");
+  header("location: ../".$prod_name."?addedtocart");
 }
 else if (isset($_GET['removeit'])){
   $item_id = $_GET['removeit'];
@@ -42,11 +42,11 @@ else if (isset($_GET['removeit'])){
   if (!count($_SESSION['cart'])){
     unset($_SESSION['cart']);
   }
-  header("location: ../cart.php");
+  header("location: ../cart");
 }
 else if (isset($_GET['clearcart'])){
   session_start();
   unset($_SESSION['cart']);
-  header("location: ../cart.php");
+  header("location: ../cart");
 }
  ?>

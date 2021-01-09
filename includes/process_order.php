@@ -4,7 +4,7 @@ if (isset($_POST['finish-order'])){
   require_once "config.php";
   require_once "functions.php";
   if (!isset($_POST['email']) || invalidEmail($_POST['email'])) {
-    header("location: ../order.php?error=invalidemail");
+    header("location: ../order?error=invalidemail");
     exit;
   }
   $email = $_POST['email'];
@@ -27,10 +27,10 @@ if (isset($_POST['finish-order'])){
         }
         mysqli_commit($conn);
         mysqli_close($conn);
-        header("location: ../order.php?order_id=".$order_id);
+        header("location: ../order?order_id=".$order_id);
       } catch (mysqli_sql_exception $exception) {
         mysqli_rollback($mysqli);
-        header("location: ..order.php?error=commit");
+        header("location: ..order?error=commit");
         exit;
       }
     }
@@ -61,15 +61,15 @@ if (isset($_POST['finish-order'])){
         }
         mysqli_commit($conn);
         mysqli_close($conn);
-        header("location: ../order.php?order_id=".$order_id);
+        header("location: ../order?order_id=".$order_id);
       } catch (mysqli_sql_exception $exception) {
         mysqli_rollback($mysqli);
-        header("location: ..order.php?error=commit");
+        header("location: ..order?error=commit");
         exit;
       }
     }
   }
 } else {
-  header("location: ../index.php");
+  header("location: ../");
 }
  ?>
