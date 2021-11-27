@@ -1,5 +1,7 @@
-#training-git project
-This project is for studying purposes only.
-Made to practise php login system.
+Php loging silly application.
 
-year 2020
+Docker installation for testing:
+from  
+$docker-compose up -d
+$ docker exec -i db sh -c 'mysql \
+-uroot -p"$MYSQL_ROOT_PASSWORD"' < $(pwd)/db/proto.sql 

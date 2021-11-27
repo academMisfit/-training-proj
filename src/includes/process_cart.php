@@ -31,9 +31,9 @@ if (isset($_POST['addto-cart'])){
     exit;
   }
 
-  $_SESSION['cart'][$prod_id] = array($product_name, $amount);
+  $_SESSION['cart'][$prod_id] = array($prod_name, $amount);
 
-  header("location: ../".$prod_name."?addedtocart");
+  header("location: ../".$prod_name.".php.?addedtocart");
 }
 else if (isset($_GET['removeit'])){
   $item_id = $_GET['removeit'];
